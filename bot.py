@@ -17,5 +17,112 @@ async def on_ready():
   
   print("봇 이름:",client.user.name,"봇 아이디:",client.user.id,"봇 버전:",discord.__version__)
 
+@client.event
+async def on_message(message):
+    # 메세지를 보낸 사람이 봇일 경우 무시한다
+    if message.author.bot:
+        return None
+
+    if message.content.startswith('!버블티'):
+        channel = message.channel
+        await channel.send('개발자')
+
+    if message.content.startswith('!봇정보'):
+        channel = message.channel
+        await channel.send('```BBTEA BOT V0.2```')
+
+    if message.content.startswith('!개발엔진'):
+        channel = message.channel
+        await channel.send('```Node.js(구)Python 3.9.6(현)```')
+    
+    if message.content.startswith('!거내뉸'):
+        channel = message.channel
+        await channel.send('```자가번식을 하는 생물```')
+
+    if message.content.startswith('!니코'):
+        channel = message.channel
+        await channel.send('더두미 ㅋㅋ루빗봉')
+    
+    if message.content.startswith('!닏고'):
+        channel = message.channel
+        await channel.send('더두미 ㅋㅋ루빗봉')
+
+    if message.content.startswith('!밥먹어'):
+        channel = message.channel
+        await channel.send('```냠냠```')
+
+    if message.content.startswith('!밥먹기'):
+        channel = message.channel
+        await channel.send('```3의 허기를 채웠다!```')
+
+    if message.content.startswith('!밥'):
+        channel = message.channel
+        await channel.send('```너가 기억해 ^ㅣ발련아```')
+
+    if message.content.startswith('!레나'):
+        channel = message.channel
+        await channel.send('```해킹장인```')
+
+    if message.content.startswith('!팤아'):
+        channel = message.channel
+        await channel.send('```그는 신이야!```')
+
+    if message.content.startswith('!태움'):
+        channel = message.channel
+        await channel.send('```강타텔미드집공유미```')
+
+    if message.content.startswith('!펭귄'):
+        channel = message.channel
+        await channel.send('```커피중독 서버장```')
+
+    if message.content.startswith('!발로충'):
+        channel = message.channel
+        await channel.send('```그냥 개10악질```')
+
+    if message.content.startswith('!토토'):
+        channel = message.channel
+        await channel.send('```레식장인```')
+
+    if message.content.startswith('!대니'):
+        channel = message.channel
+        await channel.send('```푸른냥이```')
+
+    if message.content.startswith('!푸른냥이'):
+        channel = message.channel
+        await channel.send('```대니```')
+
+    if message.content.startswith('!프리미엄'):
+        channel = message.channel
+        await channel.send('```그딴건 없다```')  
+
+    if message.content.startswith('!코드보기'):
+        channel = message.channel
+        await channel.send('```프리미엄 전용 기능이에요! !프리미엄 으로 정보를 확인해주세요!```') 
+
+    if message.content.startswith('!주은'):
+        channel = message.channel
+        await channel.send('```좋은```')
+
+    if message.content.startswith('!아무'):
+        channel = message.channel
+        await channel.send('```쿠키런 선생님```')
+
+    if message.content.startswith('!스크립트'):
+        channel = message.channel
+        await channel.send('```개악질중에 악질```')
+
+    if message.content.startswith('!안녕'):
+        channel = message.channel
+        await channel.send('```안녕하세요!```')
+
+    if message.content.startswith('!명령어'):
+        channel = message.channel
+        await channel.send('```알아서들 탐구하세요~```')
+
+    if message.content.startswith('!세트'):
+        channel = message.channel
+        await channel.send('```"강펀치"```')
+    
+
 
 client.run(os.environ['token'])
