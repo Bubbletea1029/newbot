@@ -55,9 +55,9 @@ async def on_message(message):
         channel = message.channel
         await channel.send('```3의 허기를 채웠다!```')
 
-    if message.content.startswith('!밥'):
+    if message.content.startswith('!밥보유'):
         channel = message.channel
-        await channel.send('```너가 기억해 ^ㅣ발련아```')
+        await channel.send('```밥 개수는 무한대에요!```')
 
     if message.content.startswith('!레나'):
         channel = message.channel
@@ -122,6 +122,50 @@ async def on_message(message):
     if message.content.startswith('!세트'):
         channel = message.channel
         await channel.send('```"강펀치"```')
+
+    if message.content.startswith('!반가워'):
+        channel = message.channel
+        await channel.send('```"반가워요!"```')
+
+    if message.content.startswith('!고루고루'):
+        channel = message.channel
+        await channel.send('```음...```')
+
+    if message.content.startswith('!태피스'):
+        channel = message.channel
+        await channel.send('```음...```')
+
+    if message.content.startswith('!아기 해 텔레토비'):
+        channel = message.channel
+        await channel.send('```대니```')
+
+    if message.content.startswith('!더워'):
+        channel = message.channel
+        await channel.send('```쿨러 밑은 시원해요!```')
+
+    if message.content.startswith('!붕카즈치'):
+        channel = message.channel
+        await channel.send('```로봇인가요?```')
+
+    if message.content.startswith('!마냥'):
+        channel = message.channel
+        await channel.send('```선배님이에요!```')
+
+    if message.content.startswith('!크시'):
+        channel = message.channel
+        await channel.send('```대선배님이세요!```')
+
+    if message.content.startswith('!상어집'):
+        channel = message.channel
+        await channel.send('```좋은 서버죠!```')
+
+    if message.content.startswith('!석현'):
+        channel = message.channel
+        await channel.send('```악질```')
+
+    if message.content.startswith('!CPU'):
+        channel = message.channel
+        await channel.send('```여기 CPU는 너무 어둡고 더워```')
     
 
 
