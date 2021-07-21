@@ -166,6 +166,10 @@ async def on_message(message):
     if message.content.startswith('!CPU'):
         channel = message.channel
         await channel.send('```여기 CPU는 너무 어둡고 더워```')
+
+    if message.content.startswith('!토토'):
+        channel = message.channel
+        await channel.send('*병신*')
     
 
 
