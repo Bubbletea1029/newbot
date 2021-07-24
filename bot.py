@@ -170,6 +170,10 @@ async def on_message(message):
     if message.content.startswith('!토토'):
         channel = message.channel
         await channel.send('*병신*')
+
+    if message.content.startswith('!보이스모드'):
+        channel = message.channel
+        await channel.send('*씹게이용 음성변조 프로그램*')
     
 
 
