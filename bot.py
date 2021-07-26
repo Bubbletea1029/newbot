@@ -174,6 +174,22 @@ async def on_message(message):
     if message.content.startswith('!보이스모드'):
         channel = message.channel
         await channel.send('*씹게이용 음성변조 프로그램*')
+
+    if message.content.startswith('!엑자일'):
+        channel = message.channel
+        await channel.send('*돼지멸치(라고 레나가 넣으래요)*')
+
+    if message.content.startswith('!대화봇'):
+        channel = message.channel
+        await channel.send('*섹스*')
+
+    if message.content.startswith('!엄준식'):
+        channel = message.channel
+        await channel.send('*정영우*')
+
+    if message.content.startswith('!정영우'):
+        channel = message.channel
+        await channel.send('*뇌절하는 병신*')
     
 
 
