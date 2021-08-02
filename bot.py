@@ -190,6 +190,10 @@ async def on_message(message):
     if message.content.startswith('!정영우'):
         channel = message.channel
         await channel.send('*뇌절하는 병신*')
+
+    if message.content.startswith('!쇼티'):
+        channel = message.channel
+        await channel.send('**쇼타**')
     
 
 
