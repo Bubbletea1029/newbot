@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import os
 
-client = commands.Bot(command_prefix = '-')
+client = commands.Bot(command_prefix = '!')
 
 @client.event
 async def on_ready():
@@ -194,7 +194,16 @@ async def on_message(message):
     if message.content.startswith('!쇼티'):
         channel = message.channel
         await channel.send('**쇼타**')
-    
 
+@client.event
+async def on_message(message):
+    msg = message.content
+    if(msg == '!핑' or msg == '!ping'):
+        embed = discord.Embed(title = ':ping_pong: 퐁!', description = str(client.latency) + 'ms', color = 0x00ff00)
+        await message.channel.send(embed=embed)
+
+@client.command()
+async def clear(ctx, amount : int):
+    await ctx.channel.purge(limit=amount)
 
 client.run(os.environ['token'])
