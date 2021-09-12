@@ -241,6 +241,12 @@ async def on_member_join(member):
 		embed = discord.Embed(title="Welcome!", description=member.mention + "님은 디스코드봇 입니다.", color=0x00aaaa)
 		await member.add_roles(client.get_guild(863258651233615922).get_role(863261155312926791), reason="디스코드봇 자동부여")
 
+@client.event
+async def on_message(self, message):
+    if message.content.startswith('&청소'):
+        msg= await message.channel.send('```메시지 청소 완료```')
+        await msg.delete()
+
 
 
 
