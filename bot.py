@@ -195,7 +195,7 @@ async def on_message(message):
         channel = message.channel
         await channel.send('**쇼타**')
 
-    if message.content.startswith ("!청소"):
+    if message.content.startswith ("&청소"):
         i = (message.author.guild_permissions.administrator)
 
         if i is True:
