@@ -198,12 +198,24 @@ async def on_message(message):
 @client.event
 async def on_message(message):
     msg = message.content
-    if(msg == '!핑' or msg == '!ping'):
+    if(msg == '&핑' or msg == '&ping'):
         embed = discord.Embed(title = ':ping_pong: 퐁!', description = str(client.latency) + 'ms', color = 0x00ff00)
         await message.channel.send(embed=embed)
 
 @client.command()
 async def clear(ctx, amount : int):
     await ctx.channel.purge(limit=amount)
+
+@client.event
+async def on_member_join(member):
+    fmt = '{1.name} 에 오신것을 환영합니다., {0.mention} 님'
+    channel = member.server.get_channel("channel_id_here")
+    await client.send_message(channel, fmt.format(member, member.server))
+ 
+@client.event
+async def on_member_remove(member):
+    channel = member.server.get_channel("channel_id_here")
+    fmt = '{0.mention} 님이 서버에서 나가셨습니다.'
+    await client.send_message(channel, fmt.format(member, member.server))
 
 client.run(os.environ['token'])
